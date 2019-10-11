@@ -46,7 +46,13 @@ describe('FIBOS One Press Start', () => {
 		var filepath = "common/bpaccounts.json";
 		if (fs.exists(filepath)) return;
 		var testaccounts = [];
-		['a', 'b', 'c', 'd', 'e'].forEach(function(n) {
+		var alpha_array = [];
+		let a_ascii = 97;
+		for (let i = 0; i < 21; i++)
+		{
+			alpha_array.push( String.fromCharCode(a_ascii + i));
+		}
+		alpha_array.forEach(function(n) {
 			for (var i = 1; i <= 5; i++) {
 				var prikey = FIBOS.modules.ecc.randomKeySync();
 				var name = "testnetbpp" + n + i;

@@ -26,8 +26,8 @@
 			"reserve_connector_balance": "0.0000 FO"
 		}
 	},
-	"bios_httpEndpoint": "http://127.0.0.1:8870",
-	"bios_p2p_peer_address": ["127.0.0.1:9870"],
+	"bios_httpEndpoint": "http://127.0.0.1:8800",
+	"bios_p2p_peer_address": ["127.0.0.1:9800"],
 	"contracts_path": "./contracts/",
 	"bp_httpEndpoint": "http://127.0.0.1:8801"
 }

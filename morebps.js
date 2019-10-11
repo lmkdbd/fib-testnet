@@ -15,7 +15,7 @@ if (cmdarr.length < 4) {
 
 var bp_startnum = Number(cmdarr[2]) || 2;
 var bp_endnum = Number(cmdarr[3]) || 2;
-if (bp_startnum > bp_endnum || bp_endnum > 25) {
+if (bp_startnum > bp_endnum || bp_endnum > accounts.length) {
 	console.notice('cmd like this: fibos morebps.js 2 25');
 	process.exit(0);
 }
