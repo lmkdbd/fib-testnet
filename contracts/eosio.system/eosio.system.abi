@@ -433,40 +433,22 @@
        {"name":"bidder", "type":"account_name"},
        {"name":"amount", "type":"asset"}
      ]
-   }, {
-     "name": "account",
+    },{
+     "name": "setconfig",
      "base": "",
      "fields": [
-       {"name":"owner", "type":"account_name"},
-       {"name":"balance", "type":"asset"}
+       {"name":"type", "type":"account_name"},
+       {"name":"value", "type":"uint64"}
      ]
-   }, {
-     "name": "vote_record",
+    },{
+     "name": "config",
      "base": "",
      "fields": [
-        {"name":"owner", "type":"account_name"},
-        {"name":"update_time", "type":"time_point_sec"},
-        {"name":"claimable", "type":"asset"}
+       {"name":"config_key", "type":"account_name"},
+       {"name":"config_value", "type":"uint64"}
      ]
-   }, {
-     "name": "claimbonus",
-     "base": "",
-     "fields": [
-        {"name":"owner", "type":"account_name"}
-     ]
-   }, {
-      "name": "rate_record",
-      "base": "",
-      "fields": [
-         {"name":"annual_bonus_rate", "type":"float64"}
-      ]
-    }, {
-      "name": "setbonusrate",
-      "base": "",
-      "fields": [
-         {"name":"annual_rate", "type":"float64"}
-      ]
-    }],
+   }
+   ],
    "actions": [{
      "name": "newaccount",
      "type": "newaccount",
@@ -592,12 +574,8 @@
       "type": "setparams",
       "ricardian_contract": ""
     },{
-      "name": "claimbonus",
-      "type": "claimbonus",
-      "ricardian_contract": ""
-    },{
-      "name": "setbonusrate",
-      "type": "setbonusrate",
+      "name": "setconfig",
+      "type": "setconfig",
       "ricardian_contract": ""
     }],
    "tables": [{
@@ -660,25 +638,13 @@
      "index_type": "i64",
      "key_names" : ["bidder"],
      "key_types" : ["account_name"]
-   },{
-     "name": "lockdlg",
-     "type": "account",
+    },{
+     "name": "fibosconfig",
+     "type": "config",
      "index_type": "i64",
-     "key_names" : ["owner"],
+     "key_names" : ["config_key"],
      "key_types" : ["uint64"]
-   },{
-     "name": "record",
-     "type": "vote_record",
-     "index_type": "i64",
-     "key_names" : ["owner"],
-     "key_types" : ["uint64"]
-   },{
-     "name": "rate",
-     "type": "rate_record",
-     "index_type": "i64",
-     "key_names" : [],
-     "key_types" : []
-   }
+    }
    ],
    "ricardian_clauses": [],
    "abi_extensions": []
