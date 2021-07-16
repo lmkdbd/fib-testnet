@@ -1,0 +1,349 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "account",
+            "base": "",
+            "fields": [
+                {
+                    "name": "primary",
+                    "type": "uint64"
+                },
+                {
+                    "name": "balance",
+                    "type": "extended_asset"
+                }
+            ]
+        },
+        {
+            "name": "burn",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "uris",
+                    "type": "checksum256[]"
+                }
+            ]
+        },
+        {
+            "name": "create",
+            "base": "",
+            "fields": [
+                {
+                    "name": "inital_amount",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "uris",
+                    "type": "checksum256[]"
+                }
+            ]
+        },
+        {
+            "name": "ctxextract",
+            "base": "",
+            "fields": [
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "ctxrecharge",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "ctxtransfer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "ctxtransid",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "uris",
+                    "type": "checksum256[]"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "mint",
+            "base": "",
+            "fields": [
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "uris",
+                    "type": "checksum256[]"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "receiptrans",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "uris",
+                    "type": "checksum256[]"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "stat",
+            "base": "",
+            "fields": [
+                {
+                    "name": "primary",
+                    "type": "uint64"
+                },
+                {
+                    "name": "quantity",
+                    "type": "extended_asset"
+                }
+            ]
+        },
+        {
+            "name": "token",
+            "base": "",
+            "fields": [
+                {
+                    "name": "primary",
+                    "type": "uint64"
+                },
+                {
+                    "name": "uri",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "transfer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "transferid",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "uris",
+                    "type": "checksum256[]"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "burn",
+            "type": "burn",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "create",
+            "type": "create",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "ctxextract",
+            "type": "ctxextract",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "ctxrecharge",
+            "type": "ctxrecharge",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "ctxtransfer",
+            "type": "ctxtransfer",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "ctxtransid",
+            "type": "ctxtransid",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "mint",
+            "type": "mint",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "receiptrans",
+            "type": "receiptrans",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "transfer",
+            "type": "transfer",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "transferid",
+            "type": "transferid",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "accounts",
+            "type": "account",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "ctxaccounts",
+            "type": "account",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "stats",
+            "type": "stat",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "tokens",
+            "type": "token",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
