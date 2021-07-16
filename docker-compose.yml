@@ -1,0 +1,9 @@
+version: '3'
+services:
+  chain:
+    build: .
+    ports:
+     - "8801:8801"
+     - "9801:9801"
+    volumes:
+     - ./blockData:/app/blockData
