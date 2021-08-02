@@ -3,6 +3,7 @@
 # $1, $2, $3 etc are passed arguments
 # $1 is our command
 CMD=$1
+BP_NUM=$2
 
 case "$CMD" in
   "init" )
@@ -13,6 +14,12 @@ case "$CMD" in
     # we can modify files here, using ENV variables passed in
     # "docker create" command. It can't be done during build process.
     exec fibos ./lib/4_firstbp_start.js
+    ;;
+
+  "bp_start" )
+    # we can modify files here, using ENV variables passed in
+    # "docker create" command. It can't be done during build process.
+    exec fibos ./morebps.js $BP_NUM
     ;;
 
    * )
